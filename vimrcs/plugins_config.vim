@@ -84,10 +84,11 @@ set grepprg=/bin/grep\ -nH
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
+set splitright
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
@@ -121,7 +122,7 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
@@ -172,5 +173,12 @@ let g:ale_lint_on_enter = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gitgutter_enabled=0
+let g:gitgutter_enabled=1
+"let g:gitgutter_sign_priority=0
+"let g:gitgutter_realtime = 1  
+"let g:gitgutter_eager = 1
+let g:gitgutter_preview_win_location='to'
+"let g:gitgutter_sign_allow_clobber = 1
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+nnoremap <silent> <leader>hp :GitGutterPreviewHunk<cr>
+
