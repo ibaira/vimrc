@@ -3,6 +3,7 @@
 " YouCompleteMe plugin
 nnoremap <leader>gc :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
+" Collision with commenter
 " nnoremap gc :YcmCompleter GoToDeclaration<CR>
 " nnoremap gd :YcmCompleter GoToDefinition<CR>
 
@@ -29,6 +30,9 @@ let g:ale_lint_on_insert_leave = 1
 let g:ale_linters = {'python': ['flake8', 'pylint']}
 let b:ale_fixers = {'python': ['black', 'isort', 'autopep8', 'yapf', 'trim_whitespace']}
 let g:ale_warn_about_trailing_whitespace = 1
+
+" GitGutter not by default
+let g:gitgutter_enabled = 0
 
 " General view 
 set cursorline
