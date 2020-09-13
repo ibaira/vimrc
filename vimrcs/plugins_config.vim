@@ -156,7 +156,7 @@ nnoremap <silent> <leader>z :Goyo<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
 \   'javascript': ['jshint'],
-\   'python': ['flake8'],
+\   'python': ['flake8', 'pyflakes'],
 \   'go': ['go', 'golint', 'errcheck']
 \}
 
