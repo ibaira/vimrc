@@ -119,6 +119,25 @@ let g:go_highlight_generate_tags = 1
 let g:go_highlight_string_spellcheck = 1
 let g:go_highlight_format_strings = 1
 let g:go_metalinter_autosave_enabled=['golint', 'govet']
+
+" NERDTree
+map <leader>n :NERDTreeToggle<cr>
+"" Automatic NERDTree mirroring on tab switching
+" when having just one window in the tab
+function MirrorNerdTreeIfOneWindow()
+    if winnr("$") < 2
+        NERDTreeMirror
+        " hack to move the focus from the NERDTree to the main window
+        wincmd p
+        wincmd l
+    endif
+endfunction
+
+autocmd TabEnter * silent exe MirrorNerdTreeIfOneWindow()
+
+" Close tab
+nnoremap <C-c> :tabclose<CR>
+
 " Omnisharp C#
 let g:OmniSharp_translate_cygwin_wsl = 1
 let g:OmniSharp_highlighting = 3
