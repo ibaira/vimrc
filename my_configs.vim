@@ -36,9 +36,12 @@ let g:gitgutter_enabled = 0
 
 " General view 
 set cursorline
+set cursorcolumn
 hi CursorLine term=bold cterm=bold guibg=#212536
 hi CursorColumn term=bold cterm=bold guibg=#212536
-" set cursorcolumn
+
+" Toggle relative line numbers
+nnoremap <leader>r :set relativenumber!<CR>
 
 " Smoother scrolling
 nnoremap <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
