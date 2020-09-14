@@ -138,10 +138,10 @@ let g:lightline = {
       \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
       \   'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
       \ },
-      \ 'separator': { 'left': ' ', 'right': ' ' },
-      \ 'subseparator': { 'left': ' ', 'right': ' ' }
+      \ 'separator': { 'left': '◣', 'right': '◢' },
+      \ 'subseparator': { 'left': '❯', 'right': '/' }
       \ }
-
+      
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimroom
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
