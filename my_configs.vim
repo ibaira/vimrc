@@ -73,6 +73,14 @@ vnoremap K :m '<-2<CR>gv=gv
 nmap <C-m> gccj
 vmap <C-m> gcc<Esc>gv
 
+" Keybinding to resize nerdtree window                                                                                                                 
+" resize horzontal split window
+nmap <C-Down> <C-W>-<C-W>-
+nmap <C-Up> <C-W>+<C-W>+
+" resize vertical split window
+nmap <C-Right> <C-W>><C-W>>
+nmap <C-Left> <C-W><<C-W><
+
 " Try speed up rendering
 set lazyredraw
 set ttyfast
